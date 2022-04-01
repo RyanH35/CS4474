@@ -19,9 +19,8 @@ public class UIManager : MonoBehaviour
     void Start()
     {
 
-        //get max question time from game settings
-        //maxQuestionTime = GameManager.gameManagerInstance.VAR
-        //TODO
+        //get max question time from player settings
+        maxQuestionTime = PlayerSettings.playerSettings.timerLength;
         timeLeft = maxQuestionTime;
         firstNumberText.text = MathManager.mathManagerInstance.firstNumber.ToString();
         secondNumberText.text = MathManager.mathManagerInstance.secondNumber.ToString();

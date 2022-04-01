@@ -4,7 +4,18 @@ using UnityEngine;
 using UnityEngine.UI;
 public class SettingMenu : MonoBehaviour
 {
-    public string diffculty = "medium";
+    public static SettingMenu menuSettings;
+    void Awake()
+    {
+        if (menuSettings != null)
+        {
+            GameObject.Destroy(menuSettings.gameObject);
+        }
+        else
+            menuSettings = this;
+    }
+
+    public string difficulty = "medium";
     public int length_int = 60;
     public float volume_value = 30;
     public Slider length;
@@ -13,22 +24,17 @@ public class SettingMenu : MonoBehaviour
     
     public void Easy()
     {
-        diffculty = "easy";
+        difficulty = "easy";
     }
 
     public void Medium()
     {
-        diffculty = "medium";
+        difficulty = "medium";
     }
     
     public void Hard()
     {
-        diffculty = "Hard";
-    }
-
-    public void Print()
-    {
-        print(diffculty);
+        difficulty = "hard";
     }
 
     public void GameLength()
@@ -53,8 +59,6 @@ public class SettingMenu : MonoBehaviour
         {
             length_int = 180;
         }
-
-       // voulmeText.text = "Current Volume: " + length_int;
     }
 
     public void VolumeControl()

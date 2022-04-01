@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    //store difficulty rating for timers
-    //TODO
 
     void Awake()
     {

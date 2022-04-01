@@ -15,21 +15,22 @@ public class MathManager : MonoBehaviour
         firstNumber = generateNumber();
         secondNumber = generateNumber();
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     int generateNumber()
     {
-        int randomNumber = Random.Range(1, 10);
+        int randomNumber;
+        if(PlayerSettings.playerSettings.difficulty == "hard")
+        {
+            randomNumber = Random.Range(2, 15);
+        }
+        else if(PlayerSettings.playerSettings.difficulty == "medium")
+        {
+            randomNumber = Random.Range(1, 10);
+        }
+        else
+        {
+            randomNumber = Random.Range(1, 5);
+        }
         return randomNumber;
     }
 

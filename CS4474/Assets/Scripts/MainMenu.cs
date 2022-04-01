@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayButton()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Gameplay1");
     }
 
     public void SettingButton()
