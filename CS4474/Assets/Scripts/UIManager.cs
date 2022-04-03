@@ -18,7 +18,7 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        UIManagerInstance = this;
         //get max question time from player settings
         maxQuestionTime = PlayerSettings.playerSettings.timerLength;
         timeLeft = maxQuestionTime;

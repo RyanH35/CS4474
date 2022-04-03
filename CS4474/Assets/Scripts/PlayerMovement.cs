@@ -18,15 +18,6 @@ public class PlayerMovement : MonoBehaviour
 
     private RaycastHit hit;
 
-  
-
-    private void Start()
-    {
-        transform.position = new Vector3(7, -35, -3);
-    }
-
-
-
 
     // Update is called once per frame
     void Update()
@@ -53,19 +44,6 @@ public class PlayerMovement : MonoBehaviour
         else {
             moving = false;
         }
-        if (transform.position.y <= -35) {
-            transform.position = new Vector3(transform.position.x, -35, 0);
-        } else if (transform.position.y >= 42) {
-            transform.position = new Vector3(transform.position.x, 42, 0);
-        }
-        if (transform.position.x >= 31) {
-            transform.position = new Vector3(31, transform.position.y, 0);
-        }else if (transform.position.x <= -16)
-        {
-            transform.position = new Vector3(-16, transform.position.y, 0);
-        }
-
-
 
     }
     private void FixedUpdate()
