@@ -15,10 +15,12 @@ public class LogsController : MonoBehaviour
             Debug.Log(thisnumber);
             if (answer == thisnumber)
             {
-
+                Music.MusicInstance.PlayRight();
             }
             else
-            { }
+            {
+                Music.MusicInstance.PlayWrong();
+            }
         }
     }
 }
