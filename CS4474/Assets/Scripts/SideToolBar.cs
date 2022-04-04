@@ -55,8 +55,6 @@ public class SideToolBar : MonoBehaviour
 
     public void Reset()
     {
-        Pause = false;
-        Mute = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         print("reseted");
     }
