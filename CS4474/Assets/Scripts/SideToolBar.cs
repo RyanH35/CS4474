@@ -58,9 +58,4 @@ public class SideToolBar : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         print("reseted");
     }
-    
-     public void ReturnMainMenu()
-    {
-        SceneManager.LoadScene(0);
-    }
 }

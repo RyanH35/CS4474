@@ -18,6 +18,7 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
         UIManagerInstance = this;
         //get max question time from player settings
         maxQuestionTime = PlayerSettings.playerSettings.timerLength;
@@ -34,6 +35,8 @@ public class UIManager : MonoBehaviour
         timeLeftText.text = ((int)timeLeft).ToString();
         timeLeft -= Time.deltaTime;
         TimerBar.barInstance.SetValue(timeLeft / maxQuestionTime);
+        if (timeLeft <= 0)
+            gameOverMenu.SetActive(true);
     }
 
     public void updateNumbers()
