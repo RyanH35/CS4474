@@ -42,20 +42,21 @@ public class SideToolBar : MonoBehaviour
             Time.timeScale = 0;
             Pbutton.image.sprite = PImage;
             Pause = true;
-            print("pasued");
         }
         else
         {
             Time.timeScale = 1;
             Pbutton.image.sprite = UPImage;
             Pause = false;
-            print("back");
         }
     }
 
     public void Reset()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        print("reseted");
+    }
+    public void back()
+    {
+        SceneManager.LoadScene("mainmenu");
     }
 }
